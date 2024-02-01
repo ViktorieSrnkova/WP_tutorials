@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
   <head>
     <title>WPtutorials</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,7 @@
               <img src="/img/brit.svg" alt="eng" height="21" />
             </div>
             <img src="/img/bell.svg" alt="bell" height="21" class="filter-w" />
-            <div class="user-drop">
+            <div class="user-drop" id="userDropdown" onclick="toggleDropdown()">
               <button type="button">
                 <img
                   src="/img/user.svg"
@@ -52,6 +52,14 @@
                 height="15"
                 class="filter-w"
               />
+              <div id="userDropdownContent" class="dropdown-content">
+                <p>VikyVixxxen</p>
+                <!-- Your dropdown content goes here -->
+                <a href="#profile">Profil</a>
+                <a href="#settings">Nastavení</a>
+                <a href="#saved">Uložené</a>
+                <a href="#logout">Odhlásit se</a>
+              </div>
             </div>
           </div>
         </div>
@@ -74,20 +82,20 @@
             <a href="#discussions">Diskuze</a>
           </div>
           <div class="end-items-bottom">
-            <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
-            <img src="/img/moon.svg" alt="moon" height="17" class="filter-w" />
-            <img
-              src="/img/paint.svg"
-              alt="paint"
-              height="17"
-              class="filter-w"
-            />
+            <button
+              class="dark-mode-switch"
+              type="button"
+              data-theme-toggle
+              aria-label="toggle dark mode"
+            >
+              <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+            </button>
           </div>
         </div>
       </div>
     </header>
 
-    <main></main>
+    <main><p>hello world</p></main>
 
     <footer>
       <p>viky.srnkova@seznam.cz</p>
@@ -100,6 +108,7 @@
 
       <a href="#demand">Požádat o tutoriál</a>
       <a href="#about">O WPtutorials</a>
+      <script src="main.js"></script>
     </footer>
   </body>
 </html>
