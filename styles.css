@@ -32,23 +32,24 @@ header {
   text-decoration: none;
   color: black;
 }
-.search-container {
+.search-items {
   display: flex;
   align-items: center;
-  border-radius: 60px;
-  width: 400px;
-  background-color: #efefef;
 }
-.search-container input {
+.search-container {
   width: 347px;
   height: 37px;
-  border-radius: 60px;
+  border-radius: 60px 0px 0px 60px;
   border: 0;
   padding-left: 16px;
   background-color: #efefef;
 }
-.search-container :focus {
-  border: 0;
+.search-button {
+  height: 39px;
+  width: 35px;
+  border-radius: 0px 60px 60px 0px;
+  border: none;
+  background-color: #efefef;
 }
 
 .end-items {
@@ -171,18 +172,6 @@ footer a {
 
 @media only screen and (max-width: 1000px) {
   .search-container {
-    display: flex;
-    align-items: center;
-    border-radius: 60px;
-    width: 300px;
-    background-color: #efefef;
-  }
-  .search-container input {
     width: 247px;
-    height: 37px;
-    border-radius: 60px;
-    border: 0;
-    padding-left: 16px;
-    background-color: #efefef;
   }
 }
