@@ -1,42 +1,97 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Web Page</title>
+    <title>WPtutorials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>Welcome to My Web Page</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="top-line">
+        <div class="top-line-content">
+          <h1><a href="#home">WPtutorials</a></h1>
+
+          <div class="search-container">
+            <input type="text" placeholder="Hledej.." name="search" />
+            <img src="/img/search.svg" alt="search" width="15" height="15" />
+          </div>
+          <div class="end-items">
+            <div class="flags">
+              <img src="/img/czech.svg" alt="cz" height="21" />
+              <img src="/img/brit.svg" alt="eng" height="21" />
+            </div>
+            <img src="/img/bell.svg" alt="bell" height="21" class="filter-w" />
+            <div class="user-drop">
+              <button type="button">
+                <img
+                  src="/img/user.svg"
+                  alt="user"
+                  height="23"
+                  class="filter-w"
+                />
+              </button>
+              <img
+                src="/img/arrow.svg"
+                alt="arrow"
+                height="15"
+                class="filter-w"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-line">
+        <div class="bottom-line-content">
+          <div class="bottom-line-anchors">
+            <div class="dropdown-menu">
+              <p>Kategorie</p>
+              <img
+                src="/img/arrow.svg"
+                alt="arrow"
+                height="15"
+                class="filter-w"
+              />
+            </div>
+            <a href="#news">Novinky</a>
+            <a href="#search">Pokročilé vyhledávání</a>
+            <a href="#discussions">Diskuze</a>
+          </div>
+          <div class="end-items-bottom">
+            <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+            <img src="/img/moon.svg" alt="moon" height="17" class="filter-w" />
+            <img
+              src="/img/paint.svg"
+              alt="paint"
+              height="17"
+              class="filter-w"
+            />
+          </div>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <section id="about">
-        <h2>About Us</h2>
-        <p>We are a web development company that...</p>
-      </section>
-      <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-          <li>Web Design</li>
-          <li>Web Development</li>
-          <li>Search Engine Optimization</li>
-        </ul>
-      </section>
-    </main>
+    <main></main>
 
     <footer>
-      <p>&copy; 2021 My Web Page. All rights reserved.</p>
-      <address>
-        123 Main Street, Anytown, USA<br />
-        Phone: (123) 456-7890<br />
-        Email: info@mywebpage.com
-      </address>
+      <p>viky.srnkova@seznam.cz</p>
+      <div class="footer-bug">
+        <div class="bugsplat">
+          <img src="/img/bug.svg" alt="bug" height="17" class="filter-white" />
+        </div>
+        <a href="#bug">Nahlásit bug</a>
+      </div>
+
+      <a href="#demand">Požádat o tutoriál</a>
+      <a href="#about">O WPtutorials</a>
     </footer>
   </body>
 </html>
