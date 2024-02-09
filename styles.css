@@ -78,7 +78,9 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-/* Your original styles with the redundant 'display: inline-block;' removed */
+.flags img {
+  cursor: pointer;
+}
 .user-drop {
   width: 54px;
   background-color: #17657b;
@@ -103,38 +105,44 @@ header {
   cursor: pointer;
 }
 
-/* Rest of the dropdown styles */
 .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   right: -1px;
-  background-color: #000000;
+  background-color: #004755;
   min-width: 110px;
   box-shadow: 0px 4px 1px 0px #17657b;
   z-index: 1;
   padding: 10px 5px 10px 25px;
   border-radius: 5px;
   margin-top: 5px;
+  cursor: default;
 }
 .dropdown-content a {
   color: #efefef;
   text-decoration: none;
+  padding-bottom: 3px;
 }
 .dropdown-content a:hover {
-  color: #48b4c5;
-  padding-top: 2px;
+  color: #2f8d99;
+  padding-left: 1px;
 }
 .dropdown-content p {
-  color: #48b4c5;
+  color: #2f8d99;
   text-decoration: none;
   margin-top: -2px;
   margin-left: -10px;
+  font-weight: 700;
 }
 
-/* Show the dropdown content when the user clicks on the dropdown button */
 .show {
-  display: block;
+  display: flex;
+  flex-direction: column;
+}
+.filter-w {
+  filter: invert(99%) sepia(79%) saturate(0%) hue-rotate(80deg) brightness(105%)
+    contrast(104%);
 }
 
 .bottom-line {
@@ -144,16 +152,12 @@ header {
   justify-content: center;
   height: 50px;
 }
-.filter-w {
-  filter: invert(99%) sepia(79%) saturate(0%) hue-rotate(80deg) brightness(105%)
-    contrast(104%);
-}
+
 .bottom-line-content {
   width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #efefef;
 }
 .bottom-line-anchors {
   display: flex;
@@ -165,11 +169,52 @@ header {
   text-decoration: none;
   color: #efefef;
 }
-.dropdown-menu {
+.bottom-line-anchors a:hover {
+  color: #4da9b5;
+}
+.category-drop {
   display: flex;
   align-items: center;
-  gap: 2px;
+  position: relative;
+
+  color: #efefef;
 }
+.category-drop :hover {
+  color: #4da9b5;
+}
+.category-drop p {
+  cursor: pointer;
+}
+.dropdown-content-cat {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: -1px;
+  background-color: #004755;
+  min-width: 400px;
+  box-shadow: 0px 4px 1px 0px #17657b;
+  z-index: 1;
+  padding: 10px 5px 10px 25px;
+  border-radius: 5px;
+  margin-top: 1px;
+  column-count: 3;
+  column-gap: 100px;
+}
+.dropdown-content-cat a {
+  color: #efefef;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.dropdown-content-cat a:hover {
+  color: #2f8d99;
+}
+.showCat {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .end-items-bottom {
   display: flex;
   align-items: center;
@@ -195,6 +240,9 @@ footer a {
   text-decoration: none;
   color: #efefef;
   font-weight: 500;
+}
+footer a:hover {
+  color: #004755;
 }
 .footer-bug {
   display: flex;
@@ -228,5 +276,57 @@ footer a {
 @media only screen and (max-width: 1000px) {
   .search-container {
     width: 247px;
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .top-line-content {
+    width: 80%;
+  }
+  .bottom-line-content {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 875px) {
+  .bottom-line {
+    height: 85px;
+  }
+
+  .bottom-line-anchors {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0px 30px;
+  }
+  .dropdown-content-cat {
+    left: 0px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  footer {
+    display: grid;
+    height: 100px;
+
+    grid-template-rows: 60px 20px;
+    grid-template-columns: auto auto;
+    gap: 0px 30px;
+  }
+  .left {
+    text-align: left;
+  }
+  .right {
+    text-align: right;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+  }
+  footer p {
+    margin: 2px;
   }
 }

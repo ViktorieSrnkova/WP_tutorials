@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <title>WPtutorials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="english">
+      <div class="top-line">
+        <div class="top-line-content">
+          <h1><a href="/en/index.html">WPtutorials</a></h1>
+          <div class="search-items">
+            <input
+              class="search-container"
+              type="text"
+              placeholder="Search.."
+              name="search"
+            />
+            <button class="search-button">
+              <img src="/img/search.svg" alt="search" width="15" height="15" />
+            </button>
+          </div>
+
+          <div class="end-items">
+            <div class="flags">
+              <img src="/img/czech.svg" alt="cz" height="21" id="czech-image" />
+              <img
+                src="/img/brit.svg"
+                alt="eng"
+                height="21"
+                id="english-image"
+              />
+            </div>
+            <img src="/img/bell.svg" alt="bell" height="21" class="filter-w" />
+            <div class="user-drop" id="userDropdown" onclick="toggleDropdown()">
+              <button type="button">
+                <img
+                  src="/img/user.svg"
+                  alt="user"
+                  height="23"
+                  class="filter-w"
+                />
+              </button>
+              <img
+                src="/img/arrow.svg"
+                alt="arrow"
+                height="15"
+                class="filter-w"
+              />
+              <div id="userDropdownContent" class="dropdown-content">
+                <p>VikyVixxxen</p>
+                <!-- Your dropdown content goes here -->
+                <a href="#profile">Profile</a>
+                <a href="#settings">Settings</a>
+                <a href="#saved">Saved</a>
+                <a href="#logout">Log out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-line">
+        <div class="bottom-line-content">
+          <div class="bottom-line-anchors">
+            <a href="#news">News</a>
+            <a href="#archive">All tutorials</a>
+            <a href="#search">Advanced search</a>
+            <div
+              class="category-drop"
+              id="categoryDropdown"
+              onclick="toggleDropdownCat()"
+            >
+              <p>Categories</p>
+              <img
+                src="/img/arrow.svg"
+                alt="arrow"
+                height="15"
+                class="filter-w"
+              />
+              <div id="categoryDropdownContent" class="dropdown-content-cat">
+                <a href="#profile">styles</a>
+                <a href="#settings">safety</a>
+                <a href="#saved">navigation</a>
+                <a href="#logout">elements</a>
+              </div>
+            </div>
+            <a href="#discussions">Discussions</a>
+          </div>
+          <div class="end-items-bottom">
+            <button
+              class="dark-mode-switch"
+              type="button"
+              data-theme-toggle
+              aria-label="toggle dark mode"
+            >
+              <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="english"><p>hello world</p></main>
+
+    <footer class="english">
+      <p>viky.srnkova@seznam.cz</p>
+      <div class="footer-bug">
+        <div class="bugsplat">
+          <img src="/img/bug.svg" alt="bug" height="17" class="filter-white" />
+        </div>
+        <a href="#bug">Report a bug</a>
+      </div>
+
+      <a href="#demand">Suggest tutorial topic</a>
+      <a href="#about">About WPtutorials</a>
+      <script src="../main.js"></script>
+    </footer>
+  </body>
+</html>

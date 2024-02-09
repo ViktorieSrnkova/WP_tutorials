@@ -60,13 +60,57 @@ function toggleDropdown() {
   dropdownContent.classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function (event) {
+function toggleDropdownCat() {
+  var dropdownContentCat = document.getElementById("categoryDropdownContent");
+  dropdownContentCat.classList.toggle("showCat");
+}
+
+window.addEventListener("click", function (event) {
   var userDrop = document.getElementById("userDropdown");
   var dropdownContent = document.getElementById("userDropdownContent");
+  var catDrop = document.getElementById("categoryDropdown");
+  var dropdownContentCat = document.getElementById("categoryDropdownContent");
 
   if (!userDrop.contains(event.target)) {
-    // Close the dropdown if the click is outside the user-drop
     dropdownContent.classList.remove("show");
   }
-};
+
+  if (!catDrop.contains(event.target)) {
+    dropdownContentCat.classList.remove("showCat");
+  }
+});
+
+let lang = navigator.language.slice(0, 2); // Get the first two letters of user's language preference
+
+// Hide elements that don't correspond to the user's preferred language
+if (lang === "en") {
+  document
+    .querySelectorAll(".second-language")
+    .forEach((elem) => (elem.style.display = "none"));
+} else {
+  document
+    .querySelectorAll(".english")
+    .forEach((elem) => (elem.style.display = "none"));
+}
+
+function goToEnglish() {
+  let currentUrl = window.location.href;
+  let newUrl;
+
+  if (currentUrl.includes("/cz/")) {
+    newUrl = currentUrl.replace("/cz/", "/en/");
+    window.location.href = newUrl;
+  }
+}
+
+function goToCzech() {
+  let currentUrl = window.location.href;
+  let newUrl;
+
+  if (currentUrl.includes("/en/")) {
+    newUrl = currentUrl.replace("/en/", "/cz/");
+    window.location.href = newUrl;
+  }
+}
+document.getElementById("english-image").addEventListener("click", goToEnglish);
+document.getElementById("czech-image").addEventListener("click", goToCzech);

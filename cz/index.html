@@ -12,13 +12,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <header>
+    <header class="czech">
       <div class="top-line">
         <div class="top-line-content">
-          <h1><a href="#home">WPtutorials</a></h1>
+          <img src="/img/WPT.svg" alt="logo" width="120"><a href="/cz/index.html"></a></img>
           <div class="search-items">
             <input
               class="search-container"
@@ -33,8 +33,13 @@
 
           <div class="end-items">
             <div class="flags">
-              <img src="/img/czech.svg" alt="cz" height="21" />
-              <img src="/img/brit.svg" alt="eng" height="21" />
+              <img src="/img/czech.svg" alt="cz" height="21" id="czech-image" />
+              <img
+                src="/img/brit.svg"
+                alt="eng"
+                height="21"
+                id="english-image"
+              />
             </div>
             <img src="/img/bell.svg" alt="bell" height="21" class="filter-w" />
             <div class="user-drop" id="userDropdown" onclick="toggleDropdown()">
@@ -68,9 +73,13 @@
         <div class="bottom-line-content">
           <div class="bottom-line-anchors">
             <a href="#news">Novinky</a>
-            <a href="#archive">Všechny tutoriály</a>
-            <a href="#search">Pokročilé vyhledávání</a>
-            <div class="dropdown-menu">
+            <a href="#archive">Všechny tutoriály</a>
+            <a href="#search">Pokročilé vyhledávání</a>
+            <div
+              class="category-drop"
+              id="categoryDropdown"
+              onclick="toggleDropdownCat()"
+            >
               <p>Kategorie</p>
               <img
                 src="/img/arrow.svg"
@@ -78,6 +87,12 @@
                 height="15"
                 class="filter-w"
               />
+              <div id="categoryDropdownContent" class="dropdown-content-cat">
+                <a href="#profile">styly</a>
+                <a href="#settings">bezpečnost</a>
+                <a href="#saved">navigace</a>
+                <a href="#logout">prvky</a>
+              </div>
             </div>
             <a href="#discussions">Diskuze</a>
           </div>
@@ -95,20 +110,21 @@
       </div>
     </header>
 
-    <main><p>hello world</p></main>
+    <main class="czech"><p>hello world</p></main>
 
-    <footer>
-      <p>viky.srnkova@seznam.cz</p>
+    <footer class="czech">
+      <p class="left">viky.srnkova@seznam.cz</p>
+      <a href="#about"class="right">O WPtutorials</a>
+      <a href="#demand"class="left">Navrhnout téma tutoriálu</a>
       <div class="footer-bug">
         <div class="bugsplat">
           <img src="/img/bug.svg" alt="bug" height="17" class="filter-white" />
         </div>
-        <a href="#bug">Nahlásit bug</a>
+        <a href="#bug" class="right">Nahlásit bug</a>
       </div>
 
-      <a href="#demand">Požádat o tutoriál</a>
-      <a href="#about">O WPtutorials</a>
-      <script src="main.js"></script>
+      
+      <script src="../main.js"></script>
     </footer>
   </body>
 </html>
