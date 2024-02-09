@@ -194,11 +194,9 @@ header {
   min-width: 400px;
   box-shadow: 0px 4px 1px 0px #17657b;
   z-index: 1;
-  padding: 10px 5px 10px 25px;
+  padding: 10px 2cap 10px 25px;
   border-radius: 5px;
   margin-top: 1px;
-  column-count: 3;
-  column-gap: 100px;
 }
 .dropdown-content-cat a {
   color: #efefef;
@@ -210,9 +208,10 @@ header {
   color: #2f8d99;
 }
 .showCat {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  text-align: left;
 }
 
 .end-items-bottom {

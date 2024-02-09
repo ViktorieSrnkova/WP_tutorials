@@ -15,10 +15,12 @@
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <header class="english">
+    <header class="czech">
       <div class="top-line">
         <div class="top-line-content">
-          <h1><a href="/en/index.html">WPtutorials</a></h1>
+          <a href="/en/index.html">
+            <img src="/img/WPT.svg" alt="logo" width="120" />
+          </a>
           <div class="search-items">
             <input
               class="search-container"
@@ -59,11 +61,10 @@
               />
               <div id="userDropdownContent" class="dropdown-content">
                 <p>VikyVixxxen</p>
-                <!-- Your dropdown content goes here -->
                 <a href="#profile">Profile</a>
                 <a href="#settings">Settings</a>
                 <a href="#saved">Saved</a>
-                <a href="#logout">Log out</a>
+                <a href="#logout">Log out</a>
               </div>
             </div>
           </div>
@@ -73,8 +74,8 @@
         <div class="bottom-line-content">
           <div class="bottom-line-anchors">
             <a href="#news">News</a>
-            <a href="#archive">All tutorials</a>
-            <a href="#search">Advanced search</a>
+            <a href="#archive">All tutorials</a>
+            <a href="#search">Advanced search</a>
             <div
               class="category-drop"
               id="categoryDropdown"
@@ -88,10 +89,11 @@
                 class="filter-w"
               />
               <div id="categoryDropdownContent" class="dropdown-content-cat">
-                <a href="#profile">styles</a>
-                <a href="#settings">safety</a>
-                <a href="#saved">navigation</a>
-                <a href="#logout">elements</a>
+                <a href="#styles">styles</a>
+                <a href="#safety">safety</a>
+                <a href="#navigation">navigation</a>
+                <a href="#elements">elements</a>
+                <a href="#theme">theme</a>
               </div>
             </div>
             <a href="#discussions">Discussions</a>
@@ -110,19 +112,19 @@
       </div>
     </header>
 
-    <main class="english"><p>hello world</p></main>
+    <main class="czech"><p>hello world</p></main>
 
-    <footer class="english">
-      <p>viky.srnkova@seznam.cz</p>
+    <footer class="czech">
+      <p class="left">viky.srnkova@seznam.cz</p>
+      <a href="#about" class="right">About WPtutorials</a>
+      <a href="#demand" class="left">Suggest tutorial topic</a>
       <div class="footer-bug">
         <div class="bugsplat">
           <img src="/img/bug.svg" alt="bug" height="17" class="filter-white" />
         </div>
-        <a href="#bug">Report a bug</a>
+        <a href="#bug" class="right">Report a bug</a>
       </div>
 
-      <a href="#demand">Suggest tutorial topic</a>
-      <a href="#about">About WPtutorials</a>
       <script src="../main.js"></script>
     </footer>
   </body>
