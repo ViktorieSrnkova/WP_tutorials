@@ -14,31 +14,33 @@ let currentThemeSetting = initialTheme;
 // set initial theme attribute on HTML
 document.querySelector("html").setAttribute("data-theme", initialTheme);
 
-const button = document.querySelector("[data-theme-toggle]");
+const buttons = document.querySelectorAll(".dark-mode-switch");
 
 // Reference to the SVG files
 const sunSvgPath = "/img/sun.svg";
 const moonSvgPath = "/img/moon.svg";
 
-// Set initial icon based on stored theme
-const initialIconSrc = initialTheme === "dark" ? moonSvgPath : sunSvgPath;
-button.querySelector("img").src = initialIconSrc;
+buttons.forEach((button) => {
+  // Set initial icon based on stored theme for each button
+  const initialIconSrc = initialTheme === "dark" ? moonSvgPath : sunSvgPath;
+  button.querySelector("img").src = initialIconSrc;
 
-button.addEventListener("click", () => {
-  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+  button.addEventListener("click", () => {
+    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
 
-  // update theme attribute on HTML to switch theme in CSS
-  document.querySelector("html").setAttribute("data-theme", newTheme);
+    // update theme attribute on HTML to switch theme in CSS
+    document.querySelector("html").setAttribute("data-theme", newTheme);
 
-  // update in local storage
-  localStorage.setItem("theme", newTheme);
+    // update in local storage
+    localStorage.setItem("theme", newTheme);
 
-  // update the currentThemeSetting in memory
-  currentThemeSetting = newTheme;
+    // update the currentThemeSetting in memory
+    currentThemeSetting = newTheme;
 
-  // Update the src attribute of the img based on the theme
-  const newSrc = newTheme === "dark" ? moonSvgPath : sunSvgPath;
-  button.querySelector("img").src = newSrc;
+    // Update the src attribute of the img based on the theme for each button
+    const newSrc = newTheme === "dark" ? moonSvgPath : sunSvgPath;
+    button.querySelector("img").src = newSrc;
+  });
 });
 
 function calculateSettingAsThemeString({
@@ -114,3 +116,44 @@ function goToCzech() {
 }
 document.getElementById("english-image").addEventListener("click", goToEnglish);
 document.getElementById("czech-image").addEventListener("click", goToCzech);
+document
+  .getElementById("english-image-b")
+  .addEventListener("click", goToEnglish);
+document.getElementById("czech-image-b").addEventListener("click", goToCzech);
+
+function toggleMenu() {
+  var menu = document.querySelector(".hamburger-menu");
+  menu.classList.toggle("active");
+  console.log(menu === document.querySelector(".hamburger-menu.active"));
+}
+
+window.addEventListener("resize", function () {
+  var screenWidth = window.innerWidth;
+  var hamburgerMenu = document.querySelector(".hamburger-menu");
+
+  if (screenWidth >= 750) {
+    hamburgerMenu.classList.remove("active");
+    console.log("removed .active cuz screen size >730px");
+  }
+});
+
+// Click listener for hamburger menu icon
+var hamburgerIcon = document.querySelector(".hamburger-icon");
+hamburgerIcon.addEventListener("click", function (event) {
+  event.stopPropagation();
+  toggleMenu();
+});
+
+document.addEventListener("click", function (event) {
+  var hamburgerMenu = document.querySelector(".hamburger-menu");
+  if (
+    !event.target.classList.contains("hamburger-icon") &&
+    !hamburgerMenu.contains(event.target)
+  ) {
+    hamburgerMenu.classList.remove("active");
+  }
+});
+
+window.addEventListener("load", function () {
+  window.dispatchEvent(new Event("resize"));
+});

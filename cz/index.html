@@ -17,12 +17,19 @@
   </head>
   <body>
     <header class="czech">
-      <div class="top-line">
-        <div class="top-line-content">
-          <a href="/cz/index.html">
-            <img src="/img/WPT.svg" alt="logo" width="120" />
-          </a>
-          <div class="search-items">
+      <div class="top-line-content">
+        <a href="/cz/index.html">
+          <img src="/img/WPT.svg" alt="logo" width="120" />
+        </a>
+        <div class="hamburger-menu">
+          <button
+            class="dark-mode-switch"
+            type="button"
+            aria-label="toggle dark mode"
+          >
+            <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+          </button>
+          <div class="search-items-b">
             <input
               class="search-container"
               type="text"
@@ -33,45 +40,78 @@
               <img src="/img/search.svg" alt="search" width="15" height="15" />
             </button>
           </div>
-
-          <div class="end-items">
-            <div class="flags">
-              <img src="/img/czech.svg" alt="cz" height="21" id="czech-image" />
-              <img
-                src="/img/brit.svg"
-                alt="eng"
-                height="21"
-                id="english-image"
-              />
+          <div class="bottom-line-burger">
+            <div class="bottom-line-content-burger">
+              <div class="bottom-line-anchors-burger">
+                <a href="#news">Novinky</a>
+                <a href="#archive">Všechny tutoriály</a>
+                <a href="#search">Pokročilé vyhledávání</a>
+                <a href="#categories">Kategorie </a>
+                <a href="#discussions">Diskuze</a>
+              </div>
             </div>
-            <img src="/img/bell.svg" alt="bell" height="21" class="filter-w" />
-            <div class="user-drop" id="userDropdown" onclick="toggleDropdown()">
-              <button type="button">
-                <img
-                  src="/img/user.svg"
-                  alt="user"
-                  height="23"
-                  class="filter-w"
-                />
-              </button>
+          </div>
+          <div class="flags-b">
+            <img src="/img/czech.svg" alt="cz" height="21" id="czech-image-b" />
+            <img
+              src="/img/brit.svg"
+              alt="eng"
+              height="21"
+              id="english-image-b"
+            />
+          </div>
+        </div>
+
+        <div class="search-items">
+          <input
+            class="search-container"
+            type="text"
+            placeholder="Hledej.."
+            name="search"
+          />
+          <button class="search-button">
+            <img src="/img/search.svg" alt="search" width="15" height="15" />
+          </button>
+        </div>
+
+        <div class="end-items">
+          <div class="flags">
+            <img src="/img/czech.svg" alt="cz" height="21" id="czech-image" />
+            <img src="/img/brit.svg" alt="eng" height="21" id="english-image" />
+          </div>
+
+          <div class="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="user-drop" id="userDropdown" onclick="toggleDropdown()">
+            <button type="button">
               <img
-                src="/img/arrow.svg"
-                alt="arrow"
-                height="15"
+                src="/img/user.svg"
+                alt="user"
+                height="23"
                 class="filter-w"
               />
-              <div id="userDropdownContent" class="dropdown-content">
-                <p>VikyVixxxen</p>
-                <!-- Your dropdown content goes here -->
-                <a href="#profile">Profil</a>
-                <a href="#settings">Nastavení</a>
-                <a href="#saved">Uložené</a>
-                <a href="#logout">Odhlásit se</a>
-              </div>
+            </button>
+            <img
+              src="/img/arrow.svg"
+              alt="arrow"
+              height="15"
+              class="filter-w"
+            />
+            <div id="userDropdownContent" class="dropdown-content">
+              <p>VikyVixxxen</p>
+              <!-- Your dropdown content goes here -->
+              <a href="#profile">Profil</a>
+              <a href="#settings">Nastavení</a>
+              <a href="#saved">Uložené</a>
+              <a href="#logout">Odhlásit se</a>
             </div>
           </div>
         </div>
       </div>
+
       <div class="bottom-line">
         <div class="bottom-line-content">
           <div class="bottom-line-anchors">
@@ -83,13 +123,15 @@
               id="categoryDropdown"
               onclick="toggleDropdownCat()"
             >
-              <p>Kategorie</p>
-              <img
-                src="/img/arrow.svg"
-                alt="arrow"
-                height="15"
-                class="filter-w"
-              />
+              <p class="cat-arrow">
+                Kategorie
+                <img
+                  src="/img/arrow.svg"
+                  alt="arrow"
+                  height="15"
+                  class="filter-w"
+                />
+              </p>
               <div id="categoryDropdownContent" class="dropdown-content-cat">
                 <a href="#styles">styly</a>
                 <a href="#safety">bezpečnost</a>
