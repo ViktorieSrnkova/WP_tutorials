@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WPtutorials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="czech">
+      <div class="top-line-content">
+        <a href="/cz/index.html">
+          <img src="/img/WPT.svg" alt="logo" width="120" />
+        </a>
+        <div class="hamburger-menu">
+          <button
+            class="dark-mode-switch"
+            type="button"
+            aria-label="toggle dark mode"
+          >
+            <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+          </button>
+          <div class="search-items-b">
+            <input
+              class="search-container"
+              type="text"
+              placeholder="Hledej.."
+              name="search"
+            />
+            <button class="search-button">
+              <img src="/img/search.svg" alt="search" width="15" height="15" />
+            </button>
+          </div>
+          <div class="bottom-line-burger">
+            <div class="bottom-line-content-burger">
+              <div class="bottom-line-anchors-burger">
+                <a href="#news">Novinky</a>
+                <a href="#archive">Všechny tutoriály</a>
+                <a href="#search">Pokročilé vyhledávání</a>
+                <a href="#categories">Kategorie </a>
+                <a href="#todo-list">Poznámky</a>
+              </div>
+            </div>
+          </div>
+          <div class="flags-b">
+            <img src="/img/czech.svg" alt="cz" height="21" id="czech-image-b" />
+            <img
+              src="/img/brit.svg"
+              alt="eng"
+              height="21"
+              id="english-image-b"
+            />
+          </div>
+        </div>
+
+        <div class="search-items">
+          <input
+            class="search-container"
+            type="text"
+            placeholder="Hledej.."
+            name="search"
+          />
+          <button class="search-button">
+            <img src="/img/search.svg" alt="search" width="15" height="15" />
+          </button>
+        </div>
+
+        <div class="end-items">
+          <div class="flags">
+            <img src="/img/czech.svg" alt="cz" height="21" id="czech-image" />
+            <img src="/img/brit.svg" alt="eng" height="21" id="english-image" />
+          </div>
+
+          <div class="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="user-drop" id="userDropdown" onclick="toggleDropdown()">
+            <button type="button">
+              <img
+                src="/img/user.svg"
+                alt="user"
+                height="23"
+                class="filter-w"
+              />
+            </button>
+            <img
+              src="/img/arrow.svg"
+              alt="arrow"
+              height="15"
+              class="filter-w"
+            />
+            <div id="userDropdownContent" class="dropdown-content">
+              <p>VikyVixxxen</p>
+              <!-- Your dropdown content goes here -->
+              <a href="#profile">Profil</a>
+              <a href="#settings">Nastavení</a>
+              <a href="#saved">Uložené</a>
+              <a href="#logout">Odhlásit se</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-line">
+        <div class="bottom-line-content">
+          <div class="bottom-line-anchors">
+            <a href="#news">Novinky</a>
+            <a href="#archive">Všechny tutoriály</a>
+            <a href="#search">Pokročilé vyhledávání</a>
+            <div
+              class="category-drop"
+              id="categoryDropdown"
+              onclick="toggleDropdownCat()"
+            >
+              <p class="cat-arrow">
+                Kategorie
+                <img
+                  src="/img/arrow.svg"
+                  alt="arrow"
+                  height="15"
+                  class="filter-w"
+                />
+              </p>
+              <div id="categoryDropdownContent" class="dropdown-content-cat">
+                <a href="#styles">styly</a>
+                <a href="#safety">bezpečnost</a>
+                <a href="#navigation">navigace</a>
+                <a href="#elements">prvky</a>
+                <a href="#theme">šablona</a>
+              </div>
+            </div>
+            <a href="#todo-list">Poznámky</a>
+          </div>
+          <div class="end-items-bottom">
+            <button
+              class="dark-mode-switch"
+              type="button"
+              data-theme-toggle
+              aria-label="toggle dark mode"
+            >
+              <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="czech">
+      <header class="page-title">
+        <h1 class="heading">Kontakt</h1>
+      </header>
+
+      <div class="container-con">
+        <form class="form-box">
+          <div class="form-group">
+            <label for="email">Emailová adresa:</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="message">Zpráva:</label>
+            <textarea id="message"></textarea>
+          </div>
+
+          <button type="submit" class="btn">Odeslat zprávu</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="czech">
+      <p class="left">viky.srnkova@seznam.cz</p>
+      <a href="#about" class="right">O WPtutorials</a>
+      <a href="#demand" class="left">Navrhnout téma tutoriálu</a>
+      <div class="footer-bug">
+        <div class="bugsplat">
+          <img src="/img/bug.svg" alt="bug" height="17" class="filter-white" />
+        </div>
+        <a href="#bug" class="right">Nahlásit bug</a>
+      </div>
+
+      <script src="../main.js"></script>
+    </footer>
+  </body>
+</html>
