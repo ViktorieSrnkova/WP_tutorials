@@ -13,12 +13,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="czech">
       <div class="top-line-content">
-        <a href="/cz/index.html">
+        <a href="/index.html">
           <img src="/img/WPT.svg" alt="logo" width="120" />
         </a>
         <div class="hamburger-menu">
@@ -43,11 +43,12 @@
           <div class="bottom-line-burger">
             <div class="bottom-line-content-burger">
               <div class="bottom-line-anchors-burger">
-                <a href="#news">Novinky</a>
-                <a href="#archive">Všechny tutoriály</a>
-                <a href="#search">Pokročilé vyhledávání</a>
-                <a href="#categories">Kategorie </a>
+                <a href="/index.html">Novinky</a>
+                <a href="/archive.html">Všechny tutoriály</a>
+                <a href="/page.html">Pokročilé vyhledávání</a>
+                <a href="/archive.html">Kategorie </a>
                 <a href="#todo-list">Poznámky</a>
+                <a href="/contact.html">Kontakt</a>
               </div>
             </div>
           </div>
@@ -87,19 +88,9 @@
           </div>
           <div class="user-drop" id="userDropdown" onclick="toggleDropdown()">
             <button type="button">
-              <img
-                src="/img/user.svg"
-                alt="user"
-                height="23"
-                class="filter-w"
-              />
+              <img src="img/user.svg" alt="user" height="23" class="filter-w" />
             </button>
-            <img
-              src="/img/arrow.svg"
-              alt="arrow"
-              height="15"
-              class="filter-w"
-            />
+            <img src="img/arrow.svg" alt="arrow" height="15" class="filter-w" />
             <div id="userDropdownContent" class="dropdown-content">
               <p>VikyVixxxen</p>
               <!-- Your dropdown content goes here -->
@@ -115,9 +106,9 @@
       <div class="bottom-line">
         <div class="bottom-line-content">
           <div class="bottom-line-anchors">
-            <a href="#news">Novinky</a>
-            <a href="#archive">Všechny tutoriály</a>
-            <a href="#search">Pokročilé vyhledávání</a>
+            <a href="/index.html">Novinky</a>
+            <a href="/archive.html">Všechny tutoriály</a>
+            <a href="/page.html">Pokročilé vyhledávání</a>
             <div
               class="category-drop"
               id="categoryDropdown"
@@ -126,7 +117,7 @@
               <p class="cat-arrow">
                 Kategorie
                 <img
-                  src="/img/arrow.svg"
+                  src="img/arrow.svg"
                   alt="arrow"
                   height="15"
                   class="filter-w"
@@ -141,6 +132,7 @@
               </div>
             </div>
             <a href="#todo-list">Poznámky</a>
+            <a href="/contact.html">Kontakt</a>
           </div>
           <div class="end-items-bottom">
             <button
@@ -149,7 +141,7 @@
               data-theme-toggle
               aria-label="toggle dark mode"
             >
-              <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+              <img src="img/sun.svg" alt="sun" height="17" class="filter-w" />
             </button>
           </div>
         </div>
@@ -167,7 +159,7 @@
             commodo ligula eget dolor. Aenean massa. Cum sociis natoque
             penatibus et magnis dis parturient montes, nascetur ridiculus mus.
           </p>
-          <img class="home-img" src="../img/intro.jpg" alt="image" />
+          <img class="home-img" src="img/intro.jpg" alt="image" />
 
           <h5 class="mt-5">O mě</h5>
           <p>
@@ -211,18 +203,18 @@
       </article>
     </main>
 
-    <footer class="czech">
+    <footer class="czech actual-footer">
       <p class="left">viky.srnkova@seznam.cz</p>
       <a href="#about" class="right">O WPtutorials</a>
       <a href="#demand" class="left">Navrhnout téma tutoriálu</a>
       <div class="footer-bug">
         <div class="bugsplat">
-          <img src="/img/bug.svg" alt="bug" height="17" class="filter-white" />
+          <img src="img/bug.svg" alt="bug" height="17" class="filter-white" />
         </div>
         <a href="#bug" class="right">Nahlásit bug</a>
       </div>
 
-      <script src="../main.js"></script>
+      <script src="main.js"></script>
     </footer>
   </body>
 </html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WPtutorials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="czech">
+      <div class="top-line-content">
+        <a href="/cz/index.html">
+          <img src="/img/WPT.svg" alt="logo" width="120" />
+        </a>
+        <div class="hamburger-menu">
+          <button
+            class="dark-mode-switch"
+            type="button"
+            aria-label="toggle dark mode"
+          >
+            <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+          </button>
+          <div class="search-items-b">
+            <input
+              class="search-container"
+              type="text"
+              placeholder="Hledej.."
+              name="search"
+            />
+            <button class="search-button">
+              <img src="/img/search.svg" alt="search" width="15" height="15" />
+            </button>
+          </div>
+          <div class="bottom-line-burger">
+            <div class="bottom-line-content-burger">
+              <div class="bottom-line-anchors-burger">
+                <a href="/index.html">Novinky</a>
+                <a href="/archive.html">Všechny tutoriály</a>
+                <a href="/page.html">Pokročilé vyhledávání</a>
+                <a href="/archive.html">Kategorie </a>
+                <a href="#todo-list">Poznámky</a>
+                <a href="/contact.html">Kontakt</a>
+              </div>
+            </div>
+          </div>
+          <div class="flags-b">
+            <img src="/img/czech.svg" alt="cz" height="21" id="czech-image-b" />
+            <img
+              src="/img/brit.svg"
+              alt="eng"
+              height="21"
+              id="english-image-b"
+            />
+          </div>
+        </div>
+
+        <div class="search-items">
+          <input
+            class="search-container"
+            type="text"
+            placeholder="Hledej.."
+            name="search"
+          />
+          <button class="search-button">
+            <img src="/img/search.svg" alt="search" width="15" height="15" />
+          </button>
+        </div>
+
+        <div class="end-items">
+          <div class="flags">
+            <img src="/img/czech.svg" alt="cz" height="21" id="czech-image" />
+            <img src="/img/brit.svg" alt="eng" height="21" id="english-image" />
+          </div>
+
+          <div class="hamburger-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+          <div class="user-drop" id="userDropdown" onclick="toggleDropdown()">
+            <button type="button">
+              <img
+                src="/img/user.svg"
+                alt="user"
+                height="23"
+                class="filter-w"
+              />
+            </button>
+            <img
+              src="/img/arrow.svg"
+              alt="arrow"
+              height="15"
+              class="filter-w"
+            />
+            <div id="userDropdownContent" class="dropdown-content">
+              <p>VikyVixxxen</p>
+              <!-- Your dropdown content goes here -->
+              <a href="#profile">Profil</a>
+              <a href="#settings">Nastavení</a>
+              <a href="#saved">Uložené</a>
+              <a href="#logout">Odhlásit se</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-line">
+        <div class="bottom-line-content">
+          <div class="bottom-line-anchors">
+            <a href="/index.html">Novinky</a>
+            <a href="/archive.html">Všechny tutoriály</a>
+            <a href="/page.html">Pokročilé vyhledávání</a>
+            <div
+              class="category-drop"
+              id="categoryDropdown"
+              onclick="toggleDropdownCat()"
+            >
+              <p class="cat-arrow">
+                Kategorie
+                <img
+                  src="img/arrow.svg"
+                  alt="arrow"
+                  height="15"
+                  class="filter-w"
+                />
+              </p>
+              <div id="categoryDropdownContent" class="dropdown-content-cat">
+                <a href="#styles">styly</a>
+                <a href="#safety">bezpečnost</a>
+                <a href="#navigation">navigace</a>
+                <a href="#elements">prvky</a>
+                <a href="#theme">šablona</a>
+              </div>
+            </div>
+            <a href="#todo-list">Poznámky</a>
+            <a href="/contact.html">Kontakt</a>
+          </div>
+          <div class="end-items-bottom">
+            <button
+              class="dark-mode-switch"
+              type="button"
+              data-theme-toggle
+              aria-label="toggle dark mode"
+            >
+              <img src="/img/sun.svg" alt="sun" height="17" class="filter-w" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="czech">
+      <header class="page-title">
+        <h1 class="heading">Tutoriál</h1>
+      </header>
+      <article class="content">
+        <div class="container">
+          <div class="single-top">
+            <img class="img-fluid-single" src="img/intro.jpg" alt="image" />
+            <header class="single-content-header">
+              <div class="single-meta">
+                <span class="single-date">Zveřejněno před 3 měsíci</span>
+                <div class="tags">
+                  <a class="single-tag" href="#"
+                    ><i class="fa fa-tag"></i> bezpečnost</a
+                  ><a class="single-tag" href="#"
+                    ><i class="fa fa-tag"></i> výkon</a
+                  >
+                  <a class="single-tag" href="#"
+                    ><i class="fa fa-tag"></i> css</a
+                  >
+                  <a class="single-tag" href="#"
+                    ><i class="fa fa-tag"></i> backend</a
+                  >
+                  <a class="single-tag" href="#"
+                    ><i class="fa fa-tag"></i> plugin</a
+                  >
+                  <a class="single-tag" href="#"
+                    ><i class="fa fa-tag"></i> SEO</a
+                  >
+                </div>
+                <span class="single-comment"
+                  ><a href="#comments"
+                    ><i class="fa fa-comment"></i> 3 komentáře</a
+                  ></span
+                >
+              </div>
+            </header>
+          </div>
+
+          <div class="content-body">
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+              mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+              semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+              porttitor eu, consequat vitae, eleifend ac, enim.
+            </p>
+
+            <h3 class="mt-5">Typography</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <h5 class="my-3">Bullet Points:</h5>
+            <ul class="mb-5">
+              <li class="mb-2">Lorem ipsum dolor sit amet consectetuer.</li>
+              <li class="mb-2">Aenean commodo ligula eget dolor.</li>
+              <li class="mb-2">Aenean massa cum sociis natoque penatibus.</li>
+            </ul>
+            <ol class="mb-5">
+              <li class="mb-2">Lorem ipsum dolor sit amet consectetuer.</li>
+              <li class="mb-2">Aenean commodo ligula eget dolor.</li>
+              <li class="mb-2">Aenean massa cum sociis natoque penatibus.</li>
+            </ol>
+            <h5 class="my-3">Quote Example:</h5>
+            <blockquote class="blockquote">
+              <p class="mb-2">
+                You might not think that programmers are artists, but
+                programming is an extremely creative profession. It's
+                logic-based creativity.
+              </p>
+              <footer class="blockquote-footer">John Romero</footer>
+            </blockquote>
+
+            <h3 class="mt-5">Video Example</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim.
+            </p>
+
+            <div class="video-player">
+              <iframe
+                src="https://www.youtube.com/embed/SPFDLHNm5KQ"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <hr />
+          <div class="comments-wrapper">
+            <div class="comments" id="comments">
+              <div class="comments-header">
+                <h2 class="comment-reply-title">3 replies on “Hello world!”</h2>
+                <!-- .comments-title -->
+              </div>
+              <!-- .comments-header -->
+
+              <div class="comments-inner">
+                <div
+                  id="comment-1"
+                  class="comment even thread-even depth-1 parent"
+                >
+                  <article id="div-comment-1" class="comment-body">
+                    <footer class="comment-meta">
+                      <div class="comment-author vcard">
+                        <a
+                          href="https://wordpress.org/"
+                          rel="external nofollow"
+                          class="url"
+                          ><img
+                            alt=""
+                            src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=120&amp;d=mm&amp;r=g"
+                            class="avatar avatar-120 photo"
+                            height="120"
+                            width="120"
+                          /><span class="fn">A WordPress Commenter</span
+                          ><span class="says sr-only">says:</span></a
+                        >
+                      </div>
+                      <!-- .comment-author -->
+
+                      <div class="comment-metadata">
+                        <a href="http://wordpress.mac/?p=1#comment-1">
+                          <time
+                            datetime="2020-03-25T20:07:51+00:00"
+                            title="March 25, 2020 at 8:07 pm"
+                          >
+                            March 25, 2020 at 8:07 pm
+                          </time>
+                        </a>
+                      </div>
+                      <!-- .comment-metadata -->
+                    </footer>
+                    <!-- .comment-meta -->
+
+                    <div class="comment-content entry-content">
+                      <p>
+                        Hi, this is a comment.<br />
+                        To get started with moderating, editing, and deleting
+                        comments, please visit the Comments screen in the
+                        dashboard.<br />
+                        Commenter avatars come from
+                        <a href="https://gravatar.com">Gravatar</a>.
+                      </p>
+                    </div>
+                    <!-- .comment-content -->
+
+                    <footer class="comment-footer-meta">
+                      <span class="comment-reply"
+                        ><a
+                          rel="nofollow"
+                          class="do-not-scroll comment-reply-link"
+                          href="http://wordpress.mac/?p=1&amp;replytocom=1#respond"
+                          data-commentid="1"
+                          data-postid="1"
+                          data-belowelement="div-comment-1"
+                          data-respondelement="respond"
+                          aria-label="Reply to A WordPress Commenter"
+                          >Reply</a
+                        ></span
+                      >
+                    </footer>
+                  </article>
+                  <!-- .comment-body -->
+
+                  <div
+                    id="comment-2"
+                    class="comment byuser comment-author-andrew bypostauthor odd alt depth-2"
+                  >
+                    <article id="div-comment-2" class="comment-body">
+                      <footer class="comment-meta">
+                        <div class="comment-author vcard">
+                          <img
+                            alt=""
+                            src="http://2.gravatar.com/avatar/e297925dbb035adc0b67aa14da4dcc0a?s=120&amp;d=mm&amp;r=g"
+                            class="avatar avatar-120 photo"
+                            height="120"
+                            width="120"
+                          /><span class="fn">andrew</span
+                          ><span class="says sr-only">says:</span>
+                        </div>
+                        <!-- .comment-author -->
+
+                        <div class="comment-metadata">
+                          <a href="http://wordpress.mac/?p=1#comment-2">
+                            <time
+                              datetime="2020-03-25T20:08:58+00:00"
+                              title="March 25, 2020 at 8:08 pm"
+                            >
+                              March 25, 2020 at 8:08 pm
+                            </time>
+                          </a>
+                        </div>
+                        <!-- .comment-metadata -->
+                      </footer>
+                      <!-- .comment-meta -->
+
+                      <div class="comment-content entry-content">
+                        <p>test reply</p>
+                      </div>
+                      <!-- .comment-content -->
+
+                      <footer class="comment-footer-meta">
+                        <span class="comment-reply"
+                          ><a
+                            rel="nofollow"
+                            class="do-not-scroll comment-reply-link"
+                            href="http://wordpress.mac/?p=1&amp;replytocom=2#respond"
+                            data-commentid="2"
+                            data-postid="1"
+                            data-belowelement="div-comment-2"
+                            data-respondelement="respond"
+                            aria-label="Reply to andrew"
+                            >Reply</a
+                          ></span
+                        ><span class="by-post-author">By Post Author</span>
+                      </footer>
+                    </article>
+                    <!-- .comment-body -->
+                  </div>
+                  <!-- #comment-## -->
+                </div>
+                <!-- #comment-## -->
+                <div
+                  id="comment-3"
+                  class="comment byuser comment-author-andrew bypostauthor even thread-odd thread-alt depth-1"
+                >
+                  <article id="div-comment-3" class="comment-body">
+                    <footer class="comment-meta">
+                      <div class="comment-author vcard">
+                        <img
+                          alt=""
+                          src="http://2.gravatar.com/avatar/e297925dbb035adc0b67aa14da4dcc0a?s=120&amp;d=mm&amp;r=g"
+                          class="avatar avatar-120 photo"
+                          height="120"
+                          width="120"
+                        /><span class="fn">andrew</span
+                        ><span class="says sr-only">says:</span>
+                      </div>
+                      <!-- .comment-author -->
+
+                      <div class="comment-metadata">
+                        <a href="http://wordpress.mac/?p=1#comment-3">
+                          <time
+                            datetime="2020-03-25T20:09:31+00:00"
+                            title="March 25, 2020 at 8:09 pm"
+                          >
+                            March 25, 2020 at 8:09 pm
+                          </time>
+                        </a>
+                        <span aria-hidden="true">•</span>
+                      </div>
+                      <!-- .comment-metadata -->
+                    </footer>
+                    <!-- .comment-meta -->
+
+                    <div class="comment-content entry-content">
+                      <p>Comment</p>
+                    </div>
+                    <!-- .comment-content -->
+
+                    <footer class="comment-footer-meta">
+                      <span class="comment-reply"
+                        ><a
+                          rel="nofollow"
+                          class="do-not-scroll comment-reply-link"
+                          href="http://wordpress.mac/?p=1&amp;replytocom=3#respond"
+                          data-commentid="3"
+                          data-postid="1"
+                          data-belowelement="div-comment-3"
+                          data-respondelement="respond"
+                          aria-label="Reply to andrew"
+                          >Reply</a
+                        ></span
+                      ><span class="by-post-author">By Post Author</span>
+                    </footer>
+                  </article>
+                  <!-- .comment-body -->
+                </div>
+                <!-- #comment-## -->
+              </div>
+              <!-- .comments-inner -->
+            </div>
+            <!-- comments -->
+
+            <hr class="" aria-hidden="true" />
+            <div id="respond" class="comment-respond">
+              <h2 id="reply-title" class="comment-reply-title">
+                Leave a Reply
+                <small
+                  ><a
+                    rel="nofollow"
+                    id="cancel-comment-reply-link"
+                    href="/?p=1#respond"
+                    style="display: none"
+                    >Cancel reply</a
+                  ></small
+                >
+              </h2>
+            </div>
+            <!-- #respond -->
+          </div>
+        </div>
+        <!--//container-->
+      </article>
+    </main>
+
+    <footer class="czech actual-footer">
+      <p class="left">viky.srnkova@seznam.cz</p>
+      <a href="#about" class="right">O WPtutorials</a>
+      <a href="#demand" class="left">Navrhnout téma tutoriálu</a>
+      <div class="footer-bug">
+        <div class="bugsplat">
+          <img src="/img/bug.svg" alt="bug" height="17" class="filter-white" />
+        </div>
+        <a href="#bug" class="right">Nahlásit bug</a>
+      </div>
+
+      <script src="../main.js"></script>
+    </footer>
+  </body>
+</html>
