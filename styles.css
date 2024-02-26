@@ -331,6 +331,10 @@ main {
 .blockquote p {
   font-size: 1.5rem;
   color: var(--color-fg);
+  opacity: 80%;
+}
+.blockquote-footer {
+  opacity: 70%;
 }
 .video-player {
   width: 100%;
@@ -577,6 +581,113 @@ main {
 }
 .flags-b {
   display: none;
+}
+.comments {
+  padding: 10px;
+}
+.comments-header {
+  background-color: #004755;
+  padding: 1px;
+
+  border-radius: 5px;
+}
+.comment-reply-title {
+  color: #efefef;
+}
+.comment-body {
+  margin-bottom: 40px;
+}
+.comment-meta {
+  font-size: small;
+  margin-bottom: 10px;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 80%;
+}
+.comment-author a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: var(--color-fg);
+}
+.comment-author img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border-width: 2px;
+  border: solid;
+  border-color: #17657b;
+}
+.comment-author span {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-fg);
+}
+.comment-metadata a {
+  text-decoration: none;
+  color: var(--color-fg);
+  opacity: 70%;
+}
+.comment-reply-title {
+  width: 100%;
+  text-align: center;
+}
+.comments-inner {
+  margin-top: 50px;
+  background-color: var(--color-bg);
+  padding: 10px;
+  border-radius: 5px;
+}
+.comments-wrapper {
+  background-color: #2f8d99;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+.comment-content {
+  background-color: #17657b;
+  padding: 5px;
+  color: #efefef;
+  border-radius: 5px;
+  line-height: 1.3;
+}
+.comment-content a {
+  color: #4da9b5;
+}
+.comment-content a:hover {
+  color: #2f8d99;
+}
+.depth-2 {
+  padding-left: 50px;
+}
+.comment-footer-meta {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.by-post-author {
+  font-size: small;
+  opacity: 70%;
+}
+.comment-reply {
+  background-color: #2f8d99;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+}
+.comment-reply:hover {
+  background-color: #4da9b5;
+}
+.comment-reply a {
+  text-decoration: none;
+  color: #313131;
+}
+.comment-respond {
+  color: #efefef;
 }
 @media only screen and (max-width: 1000px) {
   .search-container {
