@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light">
+<html data-theme="light" lang="cs">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WPtutorials</title>
@@ -13,10 +13,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header class="czech">
+    <header>
       <div class="top-line-content">
         <a href="/index.html">
           <img src="/img/WPT.svg" alt="logo" width="120" />
@@ -95,7 +95,6 @@
           </div>
         </div>
       </div>
-
       <div class="bottom-line">
         <div class="bottom-line-content">
           <div class="bottom-line-anchors">
@@ -140,8 +139,7 @@
         </div>
       </div>
     </header>
-
-    <main class="czech">
+    <main>
       <header class="page-title">
         <h1 class="heading">Tutoriál</h1>
       </header>
@@ -179,7 +177,6 @@
               </div>
             </header>
           </div>
-
           <div class="content-body">
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -193,7 +190,6 @@
               semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
               porttitor eu, consequat vitae, eleifend ac, enim.
             </p>
-
             <h3 class="mt-5">Úvod</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -214,11 +210,12 @@
             <h5>Citace:</h5>
             <blockquote class="blockquote">
               <p>
-                "Když pišete kód, pamatujte si, že jej nečtete jenom vy. Váš kód budou číst i ostatní programátoři. Pište takový kód, který byste sami rádi četli.
+                "Když pišete kód, pamatujte si, že jej nečtete jenom vy. Váš kód
+                budou číst i ostatní programátoři. Pište takový kód, který byste
+                sami rádi četli.
               </p>
               <footer class="blockquote-footer">Steve McConnell</footer>
             </blockquote>
-
             <h3 class="mt-5">Video</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -227,32 +224,23 @@
               Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
               sem. Nulla consequat massa quis enim.
             </p>
-
             <div class="video-player">
               <iframe
                 src="https://www.youtube.com/embed/SPFDLHNm5KQ"
-                frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
             </div>
-         
-          <!-- this needs finishing and then i think the template is done -->
-        
+          </div>
+
           <div class="comments-wrapper">
             <div class="comments" id="comments">
               <div class="comments-header">
-                <h2 class="comment-reply-title">3 replies on “Hello world!”</h2>
-                <!-- .comments-title -->
+                <h2 class="comment-reply-title">3 komentáře</h2>
               </div>
-              <!-- .comments-header -->
-
               <div class="comments-inner">
-                <div
-                  id="comment-1"
-                  class="comment depth-1 parent"
-                >
-                  <article id="div-comment-1" class="comment-body">
+                <div id="comment-1" class="comment depth-1 parent">
+                  <div id="div-comment-1" class="comment-body">
                     <footer class="comment-meta">
                       <div class="comment-author">
                         <a
@@ -263,39 +251,30 @@
                             alt=""
                             src="http://1.gravatar.com/avatar/d7a973c7dab26985da5f961be7b74480?s=120&amp;d=mm&amp;r=g"
                             class="avatar avatar-120 photo"
-                            
-                          /><span class="fn">A WordPress Commenter</span
-                          ></a
+                          /><span>Wordpressový uživatel</span></a
                         >
                       </div>
-                    
-
                       <div class="comment-metadata">
                         <a href="http://wordpress.mac/?p=1#comment-1">
                           <time
                             datetime="2020-03-25T20:07:51+00:00"
-                            title="March 25, 2020 at 8:07 pm"
+                            title="Květen 25, 2020 at 8:07 pm"
                           >
-                            March 25, 2020 at 8:07 pm
+                            Květen 25, 2020 at 8:07 pm
                           </time>
                         </a>
                       </div>
-                     
                     </footer>
-                   
-
                     <div class="comment-content">
                       <p>
-                        Hi, this is a comment.<br />
-                        To get started with moderating, editing, and deleting
-                        comments, please visit the Comments screen in the
-                        dashboard.<br />
-                        Commenter avatars come from
+                        Čau tohle je komentář.<br />
+                        Pro začátek moderování, úprav a odstraňování komentářů
+                        navštivte sekci Komentáře v ovládacím panelu.
+                        <br />
+                        Avatary komentátorů pocházejí z
                         <a href="https://gravatar.com">Gravatar</a>.
                       </p>
                     </div>
-                   
-
                     <footer class="comment-footer-meta">
                       <span class="comment-reply"
                         ><a
@@ -307,20 +286,14 @@
                           data-belowelement="div-comment-1"
                           data-respondelement="respond"
                           aria-label="Reply to A WordPress Commenter"
-                          >Reply</a
+                          >Odpověďet</a
                         ></span
                       >
                     </footer>
-                  </article>
-                  <!-- .comment-body -->
-
-                  <div
-                    id="comment-2"
-                    class="comment depth-2"
-                  >
-                  
-                    <article id="div-comment-2" class="comment-body">
-                        <footer class="comment-meta">
+                  </div>
+                  <div id="comment-2" class="comment depth-2">
+                    <div id="div-comment-2" class="comment-body">
+                      <footer class="comment-meta">
                         <div class="comment-author">
                           <img
                             alt=""
@@ -328,29 +301,22 @@
                             class="avatar avatar-120 photo"
                             height="120"
                             width="120"
-                          /><span class="fn">andrew </span
-                          ><span class="says sr-only">says:</span>
+                          /><span>VikyVixxxen </span>
                         </div>
-                    
                         <div class="comment-metadata">
                           <a href="http://wordpress.mac/?p=1#comment-2">
                             <time
                               datetime="2020-03-25T20:08:58+00:00"
-                              title="March 25, 2020 at 8:08 pm"
+                              title="Květen 25, 2020 at 8:08 pm"
                             >
-                              March 25, 2020 at 8:08 pm
+                              Květen 25, 2020 at 8:08 pm
                             </time>
                           </a>
                         </div>
-                   
                       </footer>
-         
-
-                      <div class="comment-content ">
-                        <p>test reply</p>
+                      <div class="comment-content">
+                        <p>další komentář ale od tvůrce</p>
                       </div>
-               
-
                       <footer class="comment-footer-meta">
                         <span class="comment-reply"
                           ><a
@@ -361,22 +327,16 @@
                             data-postid="1"
                             data-belowelement="div-comment-2"
                             data-respondelement="respond"
-                            aria-label="Reply to andrew"
-                            >Reply</a
+                            aria-label="Odpověďet Viky"
+                            >Odpověďet</a
                           ></span
-                        ><span class="by-post-author">By Post Author</span>
+                        ><span class="by-post-author">Od autora tutoriálu</span>
                       </footer>
-                    </article>
-                 
+                    </div>
                   </div>
-              
                 </div>
-        
-                <div
-                  id="comment-3"
-                  class="comment depth-1"
-                >
-                  <article id="div-comment-3" class="comment-body">
+                <div id="comment-3" class="comment depth-1">
+                  <div id="div-comment-3" class="comment-body">
                     <footer class="comment-meta">
                       <div class="comment-author">
                         <img
@@ -385,31 +345,23 @@
                           class="avatar avatar-120 photo"
                           height="120"
                           width="120"
-                        /><span class="fn">andrew</span
-                        ><span class="says sr-only">says:</span>
+                        /><span>VikyVixxxen</span>
                       </div>
-                      <!-- .comment-author -->
 
                       <div class="comment-metadata">
                         <a href="http://wordpress.mac/?p=1#comment-3">
                           <time
                             datetime="2020-03-25T20:09:31+00:00"
-                            title="March 25, 2020 at 8:09 pm"
+                            title="Květen 25, 2020 at 8:09 pm"
                           >
-                            March 25, 2020 at 8:09 pm
+                            Květen 25, 2020 at 8:09 pm
                           </time>
                         </a>
-                        <span aria-hidden="true">•</span>
                       </div>
-                      <!-- .comment-metadata -->
                     </footer>
-                    <!-- .comment-meta -->
-
-                    <div class="comment-content ">
-                      <p>Comment</p>
+                    <div class="comment-content">
+                      <p>komentář</p>
                     </div>
-                    <!-- .comment-content -->
-
                     <footer class="comment-footer-meta">
                       <span class="comment-reply"
                         ><a
@@ -420,43 +372,34 @@
                           data-postid="1"
                           data-belowelement="div-comment-3"
                           data-respondelement="respond"
-                          aria-label="Reply to andrew"
-                          >Reply</a
+                          aria-label="Odpověďet Viky"
+                          >Odpověďet</a
                         ></span
-                      ><span class="by-post-author">By Post Author</span>
+                      ><span class="by-post-author">Od autora tutoriálu</span>
                     </footer>
-                  </article>
-                  <!-- .comment-body -->
+                  </div>
                 </div>
-                <!-- #comment-## -->
               </div>
-              <!-- .comments-inner -->
             </div>
-            <!-- comments -->
-
-          
             <div id="respond" class="comment-respond">
               <h2 id="reply-title" class="comment-reply-title">
-                Leave a Reply
+                Zanechte odpověď
                 <small
                   ><a
                     rel="nofollow"
                     id="cancel-comment-reply-link"
                     href="/?p=1#respond"
                     style="display: none"
-                    >Cancel reply</a
+                    >Zahodit odpověď</a
                   ></small
                 >
               </h2>
             </div>
-       
           </div>
         </div>
-      
       </article>
     </main>
-
-    <footer class="czech actual-footer">
+    <footer class="actual-footer">
       <p class="left">viky.srnkova@seznam.cz</p>
       <a href="#about" class="right">O WPtutorials</a>
       <a href="#demand" class="left">Navrhnout téma tutoriálu</a>
@@ -466,8 +409,7 @@
         </div>
         <a href="#bug" class="right">Nahlásit bug</a>
       </div>
-
-      <script src="../main.js"></script>
+      <script src="/main.js"></script>
     </footer>
   </body>
 </html>
